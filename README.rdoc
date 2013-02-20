@@ -1,3 +1,26 @@
 = Flashy
 
-This project rocks and uses MIT-LICENSE.
+Flashy provides helper methods to render flash messages in Rails views. Besides, it provides a javascript library to create flash messages in the browser
+
+Flashy comes with Bootstrap classes for easy integration with {Boostrap alerts}[http://twitter.github.com/bootstrap/components.html#alerts]
+
+= Installation
+
+Add to your Gemfile
+
+  gem 'flashy'
+
+Besides, you need to require the javascript in your app/assets/application.js
+
+//= require flashy
+
+= Usage
+
+Just render the flash partial with
+
+  <%= flashy %>
+
+Create new flash errors from client using:
+
+  Flashy.message('error', 'This is the error explanation');
+  
